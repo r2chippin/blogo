@@ -8,7 +8,7 @@ import (
 func Router() *gin.Engine {
 	router := gin.Default()
 
-	router.Static("/static/", "./static")
+	router.Static("/statics/", "./resources/statics")
 
 	router.GET("/blogs/:param", controller.HandleBlogs)
 

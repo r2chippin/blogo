@@ -5,9 +5,9 @@ import (
 	"os"
 )
 
-func RenderMarkdown(param string) []byte {
+func RenderMarkdown(path string, param string) []byte {
 	// Read markdown file
-	markdownBytes, err := os.ReadFile("./static/" + param + ".md")
+	markdownBytes, err := os.ReadFile(path + param + ".md")
 	if err != nil {
 		return []byte("Failed to read Markdown file")
 	}
