@@ -10,7 +10,7 @@ func Router() *gin.Engine {
 
 	router.Static("/static/", "./static")
 
-	router.GET("/markdown", controller.RenderMarkdown)
+	router.GET("/blogs/:param", controller.HandleBlogs)
 
 	return router
 }
